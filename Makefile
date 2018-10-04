@@ -1,6 +1,6 @@
-######################
-Kernel module Makefile
-######################
+########################
+# Kernel module Makefile
+########################
 
 #Genral paths
 PWD := $(shell pwd)

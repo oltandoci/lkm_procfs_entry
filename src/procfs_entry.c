@@ -12,7 +12,7 @@
  *
  */
  
- #include <linux/module.h>
+#include <linux/module.h>
 #include <linux/version.h>
 #include <linux/kernel.h>
 #include <linux/types.h>
@@ -49,7 +49,7 @@ static const struct file_operations proc_status_fops = {
  */
 int proc_entry_init(void)
 {
-    //sprintf(buf_g, "driver/%s", MOD_ALIAS);
+    /*sprintf(buf_g, "driver/%s", MOD_ALIAS);*/
     sprintf(buf_g, "%s", MOD_ALIAS);
     proc_dir_p = proc_mkdir(buf_g, NULL);
     
@@ -72,7 +72,7 @@ int proc_entry_init(void)
  */
 void proc_entry_exit(void)
 {
-    //sprintf(buf_g, "driver/%s", MOD_ALIAS);
+    /*sprintf(buf_g, "driver/%s", MOD_ALIAS);*/
     sprintf(buf_g, "%s", MOD_ALIAS);
     remove_proc_entry("status", proc_dir_p);
     remove_proc_entry(buf_g, NULL);
